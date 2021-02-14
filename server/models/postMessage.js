@@ -4,11 +4,13 @@ const postSchema = mongoose.Schema({
     category: String,
     amount: String,
     shop: String,
+    name: String,
+    creator: String,
     mode: [String],
     selectedFile: String,
-    likeCount: {
-        type: Number,
-        default: 0,
+    likes: {
+        type: [String],
+        default: [],
     },
     createdAt: {
         type: Date,
